@@ -1,7 +1,6 @@
 .screen {
   display: flex;
   justify-content: center;
-  height: fit-content;
 }
 
 .container {
