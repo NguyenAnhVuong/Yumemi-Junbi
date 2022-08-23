@@ -1,10 +1,12 @@
 .screen {
   display: flex;
   justify-content: center;
+  padding: 68px 0;
 }
 
 .container {
   width: 1200px;
+  transition: all 0.3s ease-in-out;
 }
 
 .scroll_to_top_btn {
@@ -14,13 +16,22 @@
   z-index: 1;
   background-color: var(--primary-color);
   color: var(--white-color);
-  padding: 10px;
+  padding: 6px;
   border-radius: 6px;
   cursor: pointer; 
   border: none;
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  width: 100%;
 }
