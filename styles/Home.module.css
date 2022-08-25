@@ -1,7 +1,7 @@
 .screen {
   display: flex;
   justify-content: center;
-  padding: 68px 0;
+  padding: 120px 0;
 }
 
 .container {
@@ -27,6 +27,24 @@
   align-items: center;
 }
 
+.dark_mode_toggle {
+  position: fixed;
+  bottom: calc(28px + 32px + 12px);
+  right: 28px;
+  z-index: 1;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer; 
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .message {
   display: flex;
   justify-content: center;
@@ -34,4 +52,29 @@
   margin-bottom: 20px;
   font-size: 1.4rem;
   width: 100%;
+}
+
+.dark_mode_container {
+  background-color: var(--dark-color) !important;
+  color: var(--white-color) !important;
+  min-height: 100vh;
+}
+
+.dark_mode_container text {
+  fill: var(--white-color) !important;
+}
+
+@media (max-width: 739px) {
+  .screen {
+    padding: 76px 0;
+  }
+
+  .scroll_to_top_btn {
+    right: 12px;
+  }
+
+  .dark_mode_toggle {
+    right: 12px;
+  }
+  
 }

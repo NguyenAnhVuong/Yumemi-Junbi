@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import provinceApi from "../api/provinceApi";
+import DarkLightToggle from "../components/DarkLightToggle";
 import Header from "../components/Header";
 import PopulationGraph from "../components/PopulationGraph";
 import ProvinceList from "../components/ProvinceList";
@@ -14,10 +15,29 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({ provinces }: HomeProps) => {
   const [selectedProvinces, setSelectedProvinces] = useState<Province[]>([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const isDarkModeFromLocal = localStorage.getItem("isDarkMode");
+    if (isDarkModeFromLocal) {
+      if (isDarkModeFromLocal === "true") {
+        setIsDarkMode(true);
+      } else {
+        setIsDarkMode(false);
+      }
+    } else {
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        setIsDarkMode(true);
+      }
+    }
+  }, []);
 
   return (
-    <div>
-      <Header />
+    <div className={`${isDarkMode && HomeStyles.dark_mode_container}`}>
+      <Header isDarkMode={isDarkMode} />
       <div className={HomeStyles.screen}>
         <div className={HomeStyles.container}>
           {selectedProvinces && selectedProvinces.length > 0 ? (
@@ -32,6 +52,7 @@ const Home: NextPage<HomeProps> = ({ provinces }: HomeProps) => {
           />
         </div>
       </div>
+      <DarkLightToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <ScrollToTopButton />
     </div>
   );

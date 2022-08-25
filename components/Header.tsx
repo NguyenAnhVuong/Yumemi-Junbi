@@ -6,7 +6,11 @@ import "moment/locale/ja";
 
 moment.locale("ja");
 
-const Header = () => {
+type Props = {
+  isDarkMode: boolean;
+};
+
+const Header = ({ isDarkMode }: Props) => {
   const gotoTop = () => {
     window.scrollTo({
       top: 0,
@@ -14,7 +18,11 @@ const Header = () => {
   };
 
   return (
-    <div className={HeaderStyles.header}>
+    <div
+      className={`${HeaderStyles.header} ${
+        isDarkMode && HeaderStyles.dark_mode_header
+      }`}
+    >
       <div className={HeaderStyles.header__container}>
         <div className={HeaderStyles.header__logo_title} onClick={gotoTop}>
           <Image
