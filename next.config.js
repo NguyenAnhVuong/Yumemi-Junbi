@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['www.yumemi.co.jp'],
+  },
 }
 
 module.exports = nextConfig
