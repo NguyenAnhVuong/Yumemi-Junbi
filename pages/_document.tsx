@@ -5,6 +5,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link
+            rel="shortcut icon"
+            href="https://www.yumemi.co.jp/images/logo_yumemi_01.svg"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
