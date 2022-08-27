@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import provinceApi from "../api/provinceApi";
 import DarkLightToggle from "../components/DarkLightToggle";
@@ -37,6 +38,10 @@ const Home: NextPage<HomeProps> = ({ provinces }: HomeProps) => {
 
   return (
     <div className={`${isDarkMode && HomeStyles.dark_mode_container}`}>
+      <Head>
+        <title>Yumemi-Junbi</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <Header isDarkMode={isDarkMode} />
       <div className={HomeStyles.screen}>
         <div className={HomeStyles.container}>
