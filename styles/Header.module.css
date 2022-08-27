@@ -29,3 +29,8 @@
   font-weight: 500;
   font-size: 1.2rem;
 }
+
+.dark_mode_header {
+  background-color: var(--dark-color) !important;
+  color: var(--white-color) !important;
+}
