@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ['www.yumemi.co.jp'],
   },
+  env: {
+    RESAS_API_KEY: process.env.RESAS_API_KEY,
+  },
 }
 
 module.exports = nextConfig
