@@ -5,7 +5,7 @@ const axiosResas = axios.create();
 axiosResas.interceptors.request.use(
   (config) => {
     config.headers = {
-      "X-API-KEY": "OBtDk4kGCVoON1YNgl4RYZNd6ZgVKs6yusEYRVeY",
+      "X-API-KEY": process.env.RESAS_API_KEY || "",
     };
     return config;
   },
