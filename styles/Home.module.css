@@ -18,7 +18,7 @@
   color: var(--white-color);
   padding: 6px;
   border-radius: 6px;
-  cursor: pointer; 
+  cursor: pointer;
   border: none;
   width: 32px;
   height: 32px;
@@ -36,7 +36,7 @@
   color: var(--white-color);
   padding: 6px;
   border-radius: 6px;
-  cursor: pointer; 
+  cursor: pointer;
   border: none;
   width: 32px;
   height: 32px;
@@ -64,6 +64,12 @@
   fill: var(--white-color) !important;
 }
 
+@media (max-width: 1199px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 739px) {
   .screen {
     padding: 76px 0;
@@ -76,5 +82,4 @@
   .dark_mode_toggle {
     right: 12px;
   }
-  
 }
