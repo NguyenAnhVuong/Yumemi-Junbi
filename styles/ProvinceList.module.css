@@ -1,43 +1,42 @@
 .province_list___title {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .province_list___provinces {
-    padding-left: 48px;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    gap: 4px;
+  padding-left: 48px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 4px;
 }
 
 .province_list___list_item {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .province_list___list_item_checkbox {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .province_list___list_item_text {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media (max-width: 1023px) {
-
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
-    .province_list___provinces {
-        padding-left: 20px;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-    }
+  .province_list___provinces {
+    padding-left: 20px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 739px) {
-    .province_list___provinces {
-        padding-left: 12px;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+  .province_list___provinces {
+    padding-left: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

@@ -26,6 +26,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#environment-setup">Environment Setup</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -49,6 +50,15 @@ The project's purpose is to help users see the population change of the province
 <!-- GETTING STARTED -->
 
 ## Getting Started
+
+### Environment Setup
+
+Click [here](https://opendata.resas-portal.go.jp/form.html) to register RESAS Account and get RESAS API Key<br />
+Create .env.local file in root folder and add RESAS API Key
+
+```sh
+RESAS_API_KEY= your RESAS API Key
+```
 
 ### Prerequisites
 

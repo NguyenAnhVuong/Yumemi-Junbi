@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary-color: #4edada;
   --white-color: #fff;
   --black-color: #000;
@@ -10,7 +10,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -23,7 +23,7 @@ a {
   box-sizing: border-box;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   cursor: pointer;
   accent-color: var(--primary-color);
 }
